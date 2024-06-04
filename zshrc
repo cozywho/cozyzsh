@@ -1,4 +1,4 @@
-# cozy zsh config. Based off Luke's cause im not that smart.
+# cozy zsh config. Based off Luke's cause im not that smart. Fedora btw.
 
 # Enable colors and change prompt:
 autoload -U colors && colors
@@ -29,4 +29,4 @@ lfcd () {
 bindkey -s '^o' 'lfcd\n'
 
 # Load zsh-syntax-highlighting; should be last.
-source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh 2>/dev/null
+source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
