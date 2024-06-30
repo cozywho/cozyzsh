@@ -2,7 +2,13 @@
 
 # Enable colors and change prompt:
 autoload -U colors && colors
-PS1="%B%{$fg[red]%}[%{$fg[yellow]%}%n%{$fg[green]%}@%{$fg[blue]%}%M %{$fg[magenta]%}%~%{$fg[red]%}]%{$reset_color%}$%b "
+function rgb_color {
+  local r=$1
+  local g=$2
+  local b=$3
+  echo "%{\e[38;2;${r};${g};${b}m%}"
+}
+PS1="%B%{$(rgb_color 128 128 128)%}[%{$(rgb_color 153 153 0)%}%n%{$(rgb_color 128 128 128)%}@%{$(rgb_color 76 153 0)%}%M %{$(rgb_color 128 128 128)%}%~%{$(rgb_color 122 156 127)%}]%{$reset_color%}$%b "
 
 # History in cache directory:
 HISTSIZE=10000
